@@ -1,0 +1,6 @@
+api_protocol = "https"
+git_port = "8989"
+pipeline = "master"
+server = "localhost"
+enterprise = "test_ent"
+organization = "test_org"

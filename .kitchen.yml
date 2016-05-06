@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-14.04
+    run_list:
+    - recipe[apt]
+  - name: centos-6.5
+
+suites:
+  - name: default
+    run_list:
+      - recipe[cheftest::default]
+    attributes:
+      cheftest:
+        feature_flag: true
